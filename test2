@@ -1,0 +1,13 @@
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\test_react-app-demo\test_react-app-demo> git push        
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 240 bytes | 120.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/krishnaachauhan/test_react-app-demo.git
+   200b145..94efa76  development -> development
+PS D:\test_react-app-demo\test_react-app-demo> git status
+On branch development

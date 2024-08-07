@@ -6,6 +6,7 @@ pipeline {
     environment {
         NODE_HOME = '/usr/bin/node'
         PATH = "$NODE_HOME/bin:$PATH"
+        EMAIL_RECIPIENTS = 'krishna.chauhan@acuteinformatics.in'
     }
 
     stages {
@@ -56,7 +57,7 @@ post {
         emailext (
             subject: 'Build Notification',
             body: 'The build is complete.',
-            to: 'krishna.chauahn@acuteinformatics.in',
+            to: "${env.EMAIL_RECIPIENTS}",
             attachmentsPattern: '**/*.log',
             recipientProviders: [[$class: 'DevelopersRecipientProvider']]
         )

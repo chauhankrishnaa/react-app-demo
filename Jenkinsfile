@@ -55,7 +55,6 @@ pipeline {
                 subject: 'Build Notification',
                 body: 'The build is complete.',
                 to: 'krishna.chauhan@acuteinformatics.in',
-                cc: 'krishna.chauhan@acuteinformatics.in' 'jaid.shaikh@acuteinformatics.in',
                 attachmentsPattern: '**/*.log'
             )
         }

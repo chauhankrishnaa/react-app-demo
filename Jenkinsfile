@@ -16,6 +16,7 @@ pipeline {
             steps{
                 cleanWs()
             }
+            
 
         }
 
@@ -38,6 +39,7 @@ pipeline {
             steps { 
                 // Build React.js application
                 sh 'npm run build'
+                
             //repo
             }   
          }
@@ -49,16 +51,17 @@ pipeline {
         
 }
 }
-  post {
-        always {
-            emailext (
-                subject: 'Build Notification',
-                body: 'The build is complete.',
-                to: 'krishna.chauhan@acuteinformatics.in',
-                attachmentsPattern: '**/*.log'
-            )
-        }
-	}
+post {
+    always {
+        emailext (
+            subject: 'Build Notification',
+            body: 'The build is complete.',
+            to: 'krishna.chauahn@acuteinformatics.in',
+            attachmentsPattern: '**/*.log',
+            recipientProviders: [[$class: 'DevelopersRecipientProvider']]
+        )
+    }
+}
     //  post {
     //      always {
     //          echo 'This will always run'

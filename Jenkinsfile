@@ -20,7 +20,7 @@ pipeline {
         }
 
         
-    stage('Checkout') {
+        stage('Checkout') {
             steps {
                 // Pull the code from GitHub
                 // git branch: 'main', credentialsId: 'github-react-credentials', url: 'https://github.com/chauhankrishnaa/react-app-demo.git'
@@ -65,3 +65,5 @@ pipeline {
          unstable {
              echo 'This will run only if the run was marked as unstable'
          }
+        }
+}

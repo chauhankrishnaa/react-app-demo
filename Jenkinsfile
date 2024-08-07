@@ -23,7 +23,8 @@ pipeline {
     stage('Checkout') {
             steps {
                 // Pull the code from GitHub
-                git branch: 'main', credentialsId: 'github-react-credentials', url: 'https://github.com/chauhankrishnaa/react-app-demo.git'
+                // git branch: 'main', credentialsId: 'github-react-credentials', url: 'https://github.com/chauhankrishnaa/react-app-demo.git'
+                checkout scm
             }
         }
         

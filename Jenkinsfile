@@ -54,12 +54,13 @@ pipeline {
 }
 post {
     always {
+        echo "Sending email to: ${env.EMAIL_RECIPIENTS}"
         emailext (
             subject: 'Build Notification',
             body: 'The build is complete.',
             to: "${env.EMAIL_RECIPIENTS}",
             attachmentsPattern: '**/*.log',
-            recipientProviders: [[$class: 'DevelopersRecipientProvider']]
+            // recipientProviders: [[$class: 'DevelopersRecipientProvider']]
         )
     }
 }
